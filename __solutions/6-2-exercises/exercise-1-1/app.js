@@ -35,7 +35,9 @@ const handleClick = (e) => {
             break;
         default:
             break;
+            
     }
+    
 }
 
 btnList.addEventListener('click', handleClick);

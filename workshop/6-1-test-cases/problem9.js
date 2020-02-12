@@ -13,12 +13,20 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - A for loop might be helpful
 
 function f(str) {
+    const temp= str.split(" ");
+    let temp2 = "";
+     
+    for (let i = 0; i< temp.length; i++){
+        if(temp2.lenght <= temp[i].length) temp2 = temp[i];
+
+    }
+return temp2
 
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ["hey you did a bootylocious"];
+let outputs = ["bootylocious"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

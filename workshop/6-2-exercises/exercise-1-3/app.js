@@ -19,3 +19,70 @@
 
 // HINT:
 // to remove the 'jitters' class, check the length of the classList.
+
+const btnList = document.querySelector('#btn-list');
+
+
+const handleReset = () => {
+    for (let id = 1; id < 5; id++) {
+       
+        const initButton = document.getElementById(`btn-${id}`);
+    
+       
+        initButton.style.opacity = '50';
+        initButton.style.backgroundColor = 'gold';
+
+        
+        if (id === 4 && (initButton.classList.length > 0)) {
+            initButton.classList.remove('jitters');
+        }
+    }
+}
+
+handleReset();
+
+const toggleColor = (id, color) => {
+    const btnElement = document.getElementById(id);
+    const firstColor = btnElement.style.backgroundColor;
+
+
+if (firstColor === 'gold'){
+    btnElement.style.backgroundColor = color;
+}
+  else {
+    btnElement.style.backgroundColor =  'gold';
+  }  
+}
+
+const handleClick = (event) => {
+    const btnId = event.target.id;
+    const btnElement = document.getElementById(btnId);
+    switch (btnId) {
+        case 'btn-1':
+            if (btnElement.style.opacity === '50'){
+                btnElement.style.opacity  = '0';
+            }
+              else {
+                btnElement.style.opacity=  '100';
+              }  
+    
+            break;
+        case 'btn-2':
+            toggleColor(btnId, 'crimson');
+            break;
+        case 'btn-3':
+            toggleColor(btnId, 'lightblue');
+            break;
+        case 'btn-4':
+            btnElement.classList.toggle('jitters');
+            break;
+        case 'reset':
+            handleReset();
+            break;
+        default:
+            break;
+    }
+}
+
+
+btnList.addEventListener('click', handleClick);

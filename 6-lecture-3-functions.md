@@ -19,6 +19,13 @@ is a variable in function, or method, definition.
 ```js
 // Example
 
+function greeting(name){
+
+    return `${name} I want bacon!;
+}
+
+
+
 ```
 
 ---
@@ -29,6 +36,11 @@ is the value given to the parameter when a function, or method is called.
 
 ```js
 // Example
+function greeting(name){
+
+    return `${name} I want bacon!`;
+}
+greeting('faniel');
 
 ```
 
@@ -42,6 +54,8 @@ function f() {
 }
 
 f("bye");
+
+RETURNS "HELLO"
 ```
 
 ---

@@ -19,8 +19,8 @@ function f(arr) {
 // We need 8 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = [['hello', 4], ['', 2]];
-let outputs = ['o', undefined];
+let inputs = [['hello', 4], ['', 2], ['Coolkid', 3], ['Frank Zappa', 5], ['Sigmundus', 983838], ['Freud', 1], ['bamboo', 2], ['Cool',3]];
+let outputs = ['o', undefined, 'l', '', undefined, 'r', 'm', 'l'];
 
 // Step 3
 // Run this file in the debugger.

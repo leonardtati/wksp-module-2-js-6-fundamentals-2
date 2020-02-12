@@ -6,6 +6,17 @@ let verifyEquals = require('./verify-equals.js');
 // If any element in the array is not a number, skip it. If the array is empty, return zero.
 
 function f(arr) {
+    if(arr.length === 0)
+    return 0;
+    for (let i = 0; i<arr.length; i++){
+        if (typeof arr !== 'number'){
+            continue;
+        }
+        return arr.reduce(function (a,b){
+            return a+b
+        },0);
+       
+    }
 
 }
 

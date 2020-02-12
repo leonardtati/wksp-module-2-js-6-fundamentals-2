@@ -9,6 +9,11 @@ let verifyEquals = require('../../assets/verify-equals');
 // JAVASCRIPT -> No
 
 function f(str) {
+    if(str === str.split('').reverse().join(''))
+    return true;
+    else {
+        return false;
+    }
 
 }
 

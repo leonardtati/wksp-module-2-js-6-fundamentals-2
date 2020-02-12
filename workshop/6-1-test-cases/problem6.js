@@ -19,15 +19,23 @@ let verifyEquals = require('../../assets/verify-equals');
 // f(["spoof", 10, 10]); // undefined
 
 function f(arr) {
-
+  if( arr[0] ==='add')
+  return arr[1] + arr[2];
+else if (arr[0] ==='sub')
+return arr[1] - arr [2];
+else if (arr[0] ==='mult')
+return arr[1] * arr [2];
+else
+return undefined;
+ 
 }
 
 // Step 2
 // We need 8 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = [['add', 10, 20], ['chair', 20, 10]];
-let outputs = [30, undefined];
+let inputs = [['add', 10, 20], ['chair', 20, 10], ['mult', 20, 10], ['sub', 45, 10], ['bacon', 20, 10], ['potato', 20, 10], ['marijuana', 20, 10], ['mult', 3, 10]];
+let outputs = [30, undefined, 200, 35, undefined, undefined, undefined, 30];
 
 // Step 3
 // Run this file in the debugger.

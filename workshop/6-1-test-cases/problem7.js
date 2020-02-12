@@ -14,14 +14,30 @@ let verifyEquals = require('../../assets/verify-equals');
 
 function f(arr) {
     
+    if( arr.length<1 ||
+        arr.lengt >3 ||
+        typeof arr[0]!== 'string' ||
+        typeof arr[1] !== 'number'
+        )
+        return undefined;
+        else if (
+            arr[1] <0 ||
+            arr[1] === 0 
+        )
+        return "";
+
+        let temp = '';
+        for (let i = 0; i< arr[1]; i++){
+        temp = temp + arr[0]}
+        return temp;
 }
 
 // Step 2
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
 
-let inputs = [];
-let outputs = [];
+let inputs = [['ClockDizzle', 2], [34, 34], [34, '34'], ['ClockDizzle', '34'], ['ClockDizzle', 3], ['ClockDizzle', 4], ['ClockDizzle', 5],];
+let outputs = ['ClockDizzleClockDizzle', undefined, undefined, undefined, 'ClockDizzleClockDizzleClockDizzle', 'ClockDizzleClockDizzleClockDizzleClockDizzle', 'ClockDizzleClockDizzleClockDizzleClockDizzleClockDizzle'];
 
 // Step 3
 // Run this file in the debugger.

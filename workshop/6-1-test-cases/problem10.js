@@ -10,13 +10,20 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - Use a for loop to capitalize the words one by one
 //    - Use the toUpperCase string method
 
-function f(str) {
+function f(abc) {
+  const temp = abc.split(' ');
+  let temp2 = [];
+for (let i = 0; i<temp.length; i++){
+const capitalLetter = temp[i].charAt(0).toUppercase() + temp[i].slice(1).toLowerCase();
+temp2.push(capitalLetter);
+}
+return temp2.join(' ');
 
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ["No code changes below", "No code changes below", "No code changes below", "No code changes below", "No code changes below"];
+let outputs = ["No Code Changes Below", "No Code Changes Below", "No Code Changes Below", "No Code Changes Below", "No Code Changes Below"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
